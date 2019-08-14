@@ -6,7 +6,7 @@
 </head>
 <body>
     <?php ?>
-        <form action="site.php" method="get">
+        <form action="form.php" method="get">
             Name: <input type="text" name="username">
             Age: <input type="number" name="age">
             <input type="submit">
