@@ -323,4 +323,11 @@ htmlentities function takes a string and returns the same string with HTML conve
 // elaborate later
 
 
+# Send Email
 
+```
+    function send_email($email, $subject, $message, $headers) {
+        return mail($email, $subject, $message, $headers);
+    }
+```
+// activation link will come later
