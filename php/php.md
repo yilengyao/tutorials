@@ -331,3 +331,32 @@ htmlentities function takes a string and returns the same string with HTML conve
     }
 ```
 // activation link will come later
+
+
+
+# HTML Entity calling PHP Functions
+
+## Form Button calling PHP Functions
+
+```
+<form method="post" >
+    <?php pressed();?>
+    <input type="submit" name="cancel-submit" id="cancel-submit" value="Cancel" />
+    <input type="submit" name="recover-submit" id="recover-submit" value="Recover" />
+</form>
+```
+
+```
+<?php
+    function pressed() {
+        if($_SERVER['REQUEST_METHOD'] == "POST") {    
+            if(isset($_POST['cancel-submit'])) {
+                echo "Cancel";
+            }
+            if(isset($_POST['recover-submit'])){
+                echo "Recover";
+            }
+        }
+    }
+?>
+```
