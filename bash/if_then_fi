@@ -1,0 +1,26 @@
+#! /bin/bash
+
+if [ -z $1 ]
+then
+    echo no argument provided
+    exit 1
+elif [ ! -e $1 ]
+then
+    echo $1 does not exist
+    exit 2
+elif [ -d $1 ]
+then
+    echo $1 is a directory
+elif [ -x $1 ]
+then
+    echo $1 is not a directory and not a file
+elif [ -x $1 ]
+then
+    echo $1 is an executable file
+elif grep '#! /bin/bash' $1
+then 
+    echo $1 is an non-executable bash script
+    chmod _x $1
+else
+    echo I don\'t know what this is
+fid
