@@ -1,0 +1,17 @@
+#! /bin/bash
+# Monitoring process httpd
+#
+PROCESS=httpd
+# make sure that $PROCESS is equeal to the serve script that needs starting
+
+COUNTER=0
+while ps aux | grep $PROCESS | grep -v grep > /dev/null
+do
+    COUNTER=$((COUNTER+1))
+    sleep 1
+    echo COUNTER is $COUNTER
+done
+
+logger PROCESSMONITOR: $PROCESS stopped at `date`
+service $PROCESS start
+mail -s "Apache server just stopped" mail@example.com < .
