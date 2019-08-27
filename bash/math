@@ -1,0 +1,97 @@
+#! /bin/bash
+#
+# Practice math
+#
+# Initialize global variables
+NUMBER=0
+NUMBER1=0
+NUMBER2=0
+CORRECT_ANSWER=0
+ANSWER=0
+CORRECT=0
+MAX_TRIES=3
+
+function generate_questions() {
+    generate_numbers
+    determine_operation
+    QUESTION="$NUMBER1 $OPERATION $NUMBER2"
+}
+
+function generate_numbers() {
+    generate_number
+    NUMBER1=$NUMBER
+    generate_number
+    NUMBER2=$NUMBER
+}
+
+function generate_number() {
+    NUMBER=$(( RANDOM%10 + 1 ))
+}
+
+function determine_operation() {
+    RAND=$(( RANDOM%3 + 1 ))
+    case $RAND in
+        1) OPERATION='*';;
+        2) OPERATION='+';;
+        3) OPERATION='-';;
+    esac
+}
+
+function calculate_answer() {
+    CORRECT_ANSWER="$(echo "$QUESTION" | bc)"
+}
+
+function check_answer() {
+    if [ $ANSWER -eq $CORRECT_ANSWER 2>/dev/null ]; then
+        echo "Correct!"
+        CORRECT=1
+        if [ $TRY -ne 1 ]; then
+            write_log
+        fi
+    else
+        if [ $TRY -eq $MAX_TRIES ]; then
+            TRY=$(( $MAX_TRIES + 1 ))
+            write_log
+            echo "The correct answer was $CORRECT_ANSWER"
+            echo "Let's try the next one (press any key)"
+            read
+        else
+            TRY=$(( $TRY + 1 ))
+            echo "Nope sorry, please try again... (attempt $TRY)"
+        fi
+    fi
+}
+
+function init_log() {
+    echo "--------- Log for $(date +%d-%m-%Y' '%H:%M)" >> log
+}
+
+function write_log() {
+    if [ $TRY -le $MAX_TRIES ]; then
+        echo "Answer to $QUESTION ($CORRECT_ANSWER) given in $TRY tries" >> log
+    else
+        echo "Answer to $QUESTION ($CORRECT_ANSWER) not given" >> log
+    fi
+}
+
+init_log
+
+while true
+do
+    CORRECT=0
+    TRY=1
+    
+    generate_questions
+    calculate_answer
+    
+    echo "How much is $QUESTION ? ( attempt $TRY )"
+    echo "(Correct answer is $CORRECT_ANSWER)"
+    while [ $CORRECT -ne 1 ] && [ $TRY -le $MAX_TRIES ]
+    do
+        read ANSWER
+        check_answer
+    done
+done
+
+exit 0
+
