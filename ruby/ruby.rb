@@ -1160,3 +1160,17 @@ f.go
 p f.stop
 
 # you can evaluate a string like a code using the eval method
+
+# you can execute command line argument with Open3
+require 'open3'
+# stdin, stdout, stderr, wait_thr = Open3.popen3("touch cmdline")
+# puts "#{stdout.read} #{stderr.read} #{wait_thr.value.exitstatus}"
+
+# cmd = 'git push origin master'
+# Open3.popen3(cmd) do |stdin, stdout, stderr, wait_thr|
+#     puts "stdout is:" + stdout.read
+#     puts "stderr is:" + stderr.read 
+# end
+
+Open3.capture3('touch', stdin_data: 'jjj')
+
