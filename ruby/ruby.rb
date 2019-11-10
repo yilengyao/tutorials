@@ -911,4 +911,252 @@ Namespaces::Child::Foo
 
 # Introspection in Ruby
 # Introspection is looking inward to know about what is inside
-# 
+# Introspection is the ability to look at opject, class at runtime
+# to know what is inside
+
+# Instrospection of a class
+class Aa
+    def a 
+    end
+end
+module Bb
+    def b 
+    end
+end
+
+class Cc < Aa 
+    include Bb
+    def c 
+    end
+end
+
+# We can see instance of Cc by using instance method
+p Cc.instance_methods
+
+# What are the instance methods declared on Cc
+p Cc.instance_methods(false)
+
+# What are the ancestors of class Cc
+p Cc.ancestors
+
+# What are the superclass of Cc
+p Cc.superclass
+
+# Introspecting Instance class
+
+s = 'Hello'
+p s.class
+
+p s.methods
+
+# you want to know if s is instance of string
+p s.instance_of?(String)
+
+# public methods of instance
+p s.public_methods
+
+# private mthods of instance
+p s.private_methods
+
+# check if instance contains private method trap
+p s.private_methods.include? :trap
+
+# check if s have method upper
+p s.respond_to?(:upper)
+
+p s.respond_to?(:upcase)
+
+# Monkey Patching
+# a way of modifying and extending classes in ruby
+
+# changing an existing ruby method
+p "Hello readers".reverse
+
+class String
+    def reverse
+        self.upcase
+    end
+end
+
+p "Hello readers".reverse
+
+# Monkey patching a class
+# Override String Class to provide parsing to boolean
+# we add the to_b() method to the String class
+class String
+    def to_b
+        self =~ (/^(true|TRUE|True|1)/i) ? true : false
+    end
+end
+p 'true'.to_b
+p 'i'.to_b
+p 'foo bar'.to_b
+
+# Monkey patching an object, the difference from class is that
+# only one instance can use the new method
+
+s = 'true'
+t = 'false'
+
+def s.to_bb
+    self =~ /true/ ? true : false
+end
+
+p s.to_bb
+# p t.to_bb
+
+# Recursion in ruby
+# Tail recursion, many recursive algorithms can be expressed using iteration
+# For instance, the greatest common denominator function can be written recusively
+def gdc(x, y)
+    return x if y == 0
+    return gdc(y, x%y)
+end
+
+# iteratively
+def gdc_iter (x, y)
+    while yt != 0 do
+        x, y = y, x%y
+    end
+    return x
+end
+
+# the 2 algorithms are equivalent in theory, but the recursive verison risks a SystemStackError. However, since
+# the recursive mehtod ends with a call to itself, it could be optimized to avoid stack overflow.
+# Another way to put it: the recursive algorithm can result in the same machine code as the iterative
+# if the compiler knows to look for the recursive method call at the end of the method.
+# Ruby doens't do tail call optimmization by defaiult, but you can to it on with it
+
+RubyVM::InstructionSequence.compile_option = {
+    tailcall_optimizasiton: true,
+    trace_instruction: false
+}
+
+# JSON with Ruby
+# by requiring the json package you can convert json to hash, or hash to json
+require 'json'
+
+j = '{"a": 1, "b": 2}'
+
+p JSON.parse(j)
+
+hash = { 'a' => 1, 'b' => 2 }
+p json = hash.to_json
+p JSON.parse(json)
+
+# Gem suage
+# To install a ruby gem, enter the command
+# gem install [gemname]
+
+# if you are working on a project with a list of gem dependencies, then these will be listed in a file called
+# Gemfile. To install a new gen in the project, add the following line of code in the Gemfile
+# gem 'gemname'
+# This Gemfile is used buy the Buhndler gem to install dependencies your project requires, this does
+# however mean that you'll have to install Bundler first by running (if you haven't already)
+# gem install bundler
+# Save the file, and then run the command
+# bundle install
+# version is denoted by the -v flag
+
+# Gem installation from github/filesystem
+# you can install a gem from githu=b or filesystem. If the gem has been checkout
+# from git or somehow already on the filessytem, you could install it usiong
+# gem install --local path_to_gem/filename.gem
+
+# Install gem  from github. Download the sources from github
+# mkdir newgem
+# cd newgem
+# git clone https://urltogem.get
+
+# build the gem
+# gem build GEMNAME.gemspec
+# gem install gemname-version.gem
+
+# checking if a require gem is installed from within code
+# to check if a required gem is installed, from within your code,
+# you can use the following (using nokogiri as an example)
+
+# begin 
+#     found_gem = Gem::Specification.find_by_name('nokogiri')
+#     require 'nokogiri'
+# rescue Gem::LoadError
+# end
+
+# However this can be further extend to a function that can be
+# used in setting up functionality within your code
+
+def gem_installed?(gem_name)
+    found_gem = false
+    begin
+        found_gem = Gem::Specification.find_by_name(gem_name)
+    rescue Gem::LoadError
+        return false
+    else
+        return true
+    end
+end
+
+if gem_installed?('nokogiri')
+    require 'nokogiri'
+else
+    printf "nokogiri gem required\n"
+    exit 1
+end
+
+#  installing gem by specifying in Gemfile
+# source 'https://rubygem.org'
+# gem 'bundler'
+
+# # points to a release
+# gem 'rack', '~>1.5.2'
+# # User a specific version
+# gem 'sinatra', '1.4.1'
+# # use at least a version ro anything greater
+# gem 'uglifier',  '>= 1.3.0'
+
+# # pull gem from git repo
+# gem 'sinatra', git: 'https://github.com/sinatra/sinatra.git'
+# # you can specify a sha
+# gem 'sinatra', git: 'https://github.com/sinatra/sinatra.git', sha: '30d4fb468fd1d6373f82127d845b153f17b54c51'
+# # you can also specify a branch, though this is often unsafe
+# gem 'sinatra', git: 'https://github.com/sinatra/sinatra.git', branch: 'master'
+
+# # you can group gem depending on what they are used for
+# group :development, :test do
+#     # This gem is only available in dev and test, not production. 
+#     gem 'byebug'
+# end
+
+# to install gems from Gemfile
+# gem install bundler
+# bundle install
+
+# Dynamically Creating Methods from Strings
+xml = <<ENDXML 
+<methods>
+    <method name="go">puts "I'm going!"</method>
+    <method name="stop">7*6</method>
+</methods>
+ENDXML
+
+
+class Fooo 
+    def self.add_method(name, code)
+        body = eval( "Proc.new{ #{code} }")
+        define_method(name, body)
+    end
+end
+
+require 'nokogiri'
+doc = Nokogiri.XML(xml)
+doc.xpath('//method').each do |method|
+    Fooo.add_method( method['name'], method.text )
+end
+
+f = Fooo.new
+p Fooo.instance_methods(false)
+p f.public_methods(false)
+f.go
+p f.stop
+
+# you can evaluate a string like a code using the eval method
