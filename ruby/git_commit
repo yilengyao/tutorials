@@ -4,12 +4,20 @@ require 'open3'
 
 p "please enter commit message"
 stdin_data = gets
-stdin, stdout, stderr, wait_thr = Open3.popen3("git add .")
-puts "stdout is:" + stdout.read
-puts "stderr is:" + stderr.read
-stdin, stdout, stderr, wait_thr = Open3.popen3("git commit -m '#{stdin_data}'")
-puts "stdout is:" + stdout.read
-puts "stderr is:" + stderr.read
-stdin, stdout, stderr, wait_thr = Open3.popen3("git push")
-puts "stdout is:" + stdout.read
-puts "stderr is:" + stderr.read
+#stdin, stdout, stderr, wait_thr = Open3.popen3("git add .")
+#puts "stdout is:" + stdout.read
+#puts "stderr is:" + stderr.read
+#stdin, stdout, stderr, wait_thr = Open3.popen3("git commit -m '#{stdin_data}'")
+#puts "stdout is:" + stdout.read
+#puts "stderr is:" + stderr.read
+#stdin, stdout, stderr, wait_thr = Open3.popen3("git push")
+#puts "stdout is:" + stdout.read
+#puts "stderr is:" + stderr.read
+
+commands = ["git add .", "git commit -m '#{stdin_data}'", "git push"]
+
+for command in commands
+    stdin, stdout, stderr, wait_thr = Open3.popen3(command)
+    puts "stdout is:" + stdout.read
+    puts "stderr is:" + stderr.read
+end
