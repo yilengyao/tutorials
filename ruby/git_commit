@@ -6,7 +6,7 @@ p "please enter commit message"
 stdin_data = gets
 
 commands = ['git add .', \
-            'git commit -m "#{stdin_data}"', \
+            'git commit -m `#{stdin_data}`', \
             'git push']
 
 for command in commands
