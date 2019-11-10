@@ -661,3 +661,254 @@ p pizza.extend(LargePizza).cost
 # of any state changes, usually by calling one of their methods
 
 # ruby provides a simple mechanism to implement the Observer design pattern
+
+# Observer
+# The observer pattern is a software design pattern in which an object (called subject)
+# maintains a liust of its dependent (called observers), and notifies them automatically of any state changes
+# usually by calling one of their methods
+
+# Ruby provides a simple mechanism to implement the Observer design pattern.
+# The module Observble provides the logic to notify the subscriber of any changes in the Observable object
+
+# For this work the observable has to assert it has changed and notify
+# the observers
+# Objects observicng have to implement an update() method, which will be the callback for the Observer
+
+require "observer"
+
+class Moderator
+    include Observable
+
+    def initialize(name)
+        @name = name
+        @message = "hello world"
+    end
+    def write
+        message = @message
+        changed
+        notify_observers(message)
+        return message
+    end
+    def set( message )
+         @message = message
+    end
+end
+
+# moderator = Moderator.new("Rupert")
+# p moderator.write
+# moderator.set("else")
+# p moderator.write
+
+class Warner
+    def initialize(moderator, limit)
+        @limit = limit
+        moderator.add_observer(self)
+    end
+end
+
+class Subscriber < Warner
+    def update(message)
+        p "#{message}"
+    end
+end
+
+moderator = Moderator.new("Ropert")
+subscriber = Subscriber.new(moderator, 3)
+p moderator.write
+subscriber.update("no")
+moderator.set("abcd")
+p moderator.write
+
+# Singleton pattern, singleton error is implemnted by including the
+# Singleton module
+
+# require 'singleton'
+
+# class Logger
+#     include Singleton
+# end
+
+# # If you try to instantiate this class as you normally would a regular class,
+# # a NoMethodError exception is raised. The constructor is made private to
+# # prevent other instances from being accidentally created
+
+# begin
+#     Logger.new
+# rescue NoMethodError
+#     p "NoMethodError"
+# end
+
+# # To access the instance of this class we need to use the instance() method
+# first, second = Logger.instance, Logger.instance
+# p first == second 
+
+# Logger example
+require 'singleton'
+
+class Logger
+    include Singleton
+    def initialize
+        @log = File.open("log.txt", "a")
+    end
+    def log(msg)
+        @log.puts(msg)
+    end
+end
+
+Logger.instance.log('message 2')
+
+# Loading Source Files
+# Require files to be loaded only once
+# The require mehtod will load files only once (serveral calls to require will result the code int the file being evaluated only once)
+# It will search your $LOAD_PATH to find the required file
+# if the parameter is not an absolute path.
+# Extensions like .rb, .so, .o, or .dll are optional. 
+# Relative paths will bre resolved to the current working directory of the process
+
+require 'awesome_print'
+
+# the require_relative allows you to load files relative
+# to the current source file
+begin
+    #require_relative 'myproj/version'
+rescue
+    p "cannot load"
+end
+
+# Thread
+# User mutex to synchronizd access to a variable iss accessed from multiple threads
+# counter = 0
+# counter_mutex = Mutex.new
+
+# # Start 3 parallel threads and increment counter
+# 10.times.map do |index|
+#     Thread.new do
+#         counter_mutex.synchronize { counter += 1 }
+#         p counter
+#     end 
+# end.each(&:join) # Wait for all threads to finish before killing the process
+# p counter
+
+# Otherwise, the value of counter currently visisble to one thread can be changed by naother thread
+# Without Mutex (see e.g. Thread 0, where Before and After differ by kmore than 1)
+
+# thread sematics
+# A new thread separate from the main thread's executin, can be created using Thread.new
+
+# thr = Thread.new {
+#     sleep 1 # 1 second sleep of sub thread
+#     p "Whats the big deal"
+# }
+# # This will automatically start the execution of the new thread
+# # To freeze execution of the main Threadm until the new thread stops, use join:
+
+# thr.join #=> ... "Whats the big deals"
+
+# Terminating a thread
+# A thread terminates if ti reaches the end of its code block
+# The best way to terminate a thread early is to convince it 
+# to reach the ned of tis code block. This way, the thread can run cleanup before dying
+
+# This thread runs a loop while the instance variable continue is true.
+# Set this variable to false, and the thread to die a natural death
+
+# require 'thread'
+# class CounterThread < Thread
+#     def initialize
+#         @count = 0
+#         @continue = true
+    
+#         super do
+#             @count += 1 while @continue
+#             p "I counted up to #{@count} before i cruelly stopped"
+#         end
+#     end
+
+#     def stop
+#         @continue = false
+#     end
+# end
+
+# counter = CounterThread.new
+# sleep 2
+# counter.stop
+
+# how to kill a thread
+# you can use Thread.kill or Thread.terminate
+
+# thr = Thread.new { ... }
+# Thread.kill(thr)
+
+# Modules
+# A simple mixin with include
+# module SomeMixin
+#     def foo
+#         p "foo!"
+#     end
+# end
+
+# class Bar
+#     include SomeMixin
+#     def baz
+#         p "baz!"
+#     end
+# end
+# b = Bar.new
+# b.baz
+# b.foo
+
+# Now Bar is a mix of its own methods and the methods from SomeMixin
+# Note that how a mixin is used in a class depends on how it is added
+# The include keyword evaluates the modele code in the class context (eg. method definitions will be methods on instances of the class)
+# extend will evaluate the module code in the context of the singleton class of the object (methods are
+# available directly on the extended object)
+
+# Module and Class Composition
+# module to build mroe complex classes through composition. The include
+# ModuleName directive incorporates a module's method into a class
+
+# module Foo
+#     def foo_method
+#         p 'foo_method called!'
+#     end
+# end
+
+# module Bar
+#     def bar_method
+#         p 'bar_method called!'
+#     end
+# end
+
+# class Baz 
+#     include Foo
+#     include Bar
+#     def baz_method
+#         p 'baz_method called!'
+#     end
+# end
+
+# new_baz = Baz.new
+# new_baz.baz_method
+# new_baz.bar_method
+# new_baz.foo_method
+
+# Module as Namespaces
+# Modules can contain other modules and classes
+
+module Namespaces
+    module Child
+        class Foo
+        end
+    end # module Child
+
+    # Foo can be accessed as:
+    Child::Foo
+end # module Namespace
+
+# Foo must be accessed as:
+Namespaces::Child::Foo
+
+
+# Introspection in Ruby
+# Introspection is looking inward to know about what is inside
+# 
