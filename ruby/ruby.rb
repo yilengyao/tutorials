@@ -1172,5 +1172,25 @@ require 'open3'
 #     puts "stderr is:" + stderr.read 
 # end
 
-Open3.capture3('touch', stdin_data: 'jjj')
+# Open3.capture3('touch', stdin_data: 'example touch file')
 
+# you can execute commandline uing popen3, exec, system or '`' backticks
+# this is how you perform git commit using ruby
+# require 'open3'
+
+# p "please enter commit message"
+# stdin_data = gets
+
+# commands = ['git add .', \
+#             'git commit -m "' + stdin_data +'"', \
+#             'git push']
+
+# for command in commands
+#     stdin, stdout, stderr, wait_thr = Open3.popen3(command)
+#     puts "stdout is:" + stdout.read
+#     puts "stderr is:" + stderr.read
+# #    system (command)
+# #    p command
+# end
+
+# you can imbed other languages in ruby code using rubyinline
