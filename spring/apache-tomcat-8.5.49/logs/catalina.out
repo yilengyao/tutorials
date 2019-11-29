@@ -1,0 +1,147 @@
+28-Nov-2019 11:05:14.914 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.49
+28-Nov-2019 11:05:14.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 17 2019 18:45:30 UTC
+28-Nov-2019 11:05:14.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.49.0
+28-Nov-2019 11:05:14.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+28-Nov-2019 11:05:14.932 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.14.6
+28-Nov-2019 11:05:14.933 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+28-Nov-2019 11:05:14.933 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre
+28-Nov-2019 11:05:14.933 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_231-b11
+28-Nov-2019 11:05:14.933 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Nov-2019 11:05:14.933 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49
+28-Nov-2019 11:05:14.934 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49
+28-Nov-2019 11:05:14.934 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/conf/logging.properties
+28-Nov-2019 11:05:14.934 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Nov-2019 11:05:14.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Nov-2019 11:05:14.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Nov-2019 11:05:14.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Nov-2019 11:05:14.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Nov-2019 11:05:14.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49
+28-Nov-2019 11:05:14.935 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49
+28-Nov-2019 11:05:14.938 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/temp
+28-Nov-2019 11:05:14.938 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/yyaoa/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+28-Nov-2019 11:05:15.241 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:05:15.271 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Nov-2019 11:05:15.284 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:05:15.286 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Nov-2019 11:05:15.287 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 971 ms
+28-Nov-2019 11:05:15.318 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Nov-2019 11:05:15.318 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.49
+28-Nov-2019 11:05:15.328 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/docs]
+28-Nov-2019 11:05:15.653 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/docs] has finished in [325] ms
+28-Nov-2019 11:05:15.653 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/manager]
+28-Nov-2019 11:05:15.684 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/manager] has finished in [31] ms
+28-Nov-2019 11:05:15.684 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/examples]
+28-Nov-2019 11:05:16.021 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/examples] has finished in [337] ms
+28-Nov-2019 11:05:16.022 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/ROOT]
+28-Nov-2019 11:05:16.037 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/ROOT] has finished in [14] ms
+28-Nov-2019 11:05:16.037 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/host-manager]
+28-Nov-2019 11:05:16.054 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/host-manager] has finished in [17] ms
+28-Nov-2019 11:05:16.057 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:05:16.066 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:05:16.068 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 780 ms
+28-Nov-2019 11:06:17.271 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Nov-2019 11:06:17.272 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:06:17.281 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:06:17.288 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Nov-2019 11:06:17.318 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:06:17.321 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:06:17.322 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:06:17.323 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:06:47.274 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.49
+28-Nov-2019 11:06:47.276 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 17 2019 18:45:30 UTC
+28-Nov-2019 11:06:47.277 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.49.0
+28-Nov-2019 11:06:47.277 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+28-Nov-2019 11:06:47.278 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.14.6
+28-Nov-2019 11:06:47.278 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+28-Nov-2019 11:06:47.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre
+28-Nov-2019 11:06:47.279 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_231-b11
+28-Nov-2019 11:06:47.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Nov-2019 11:06:47.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49
+28-Nov-2019 11:06:47.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49
+28-Nov-2019 11:06:47.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/conf/logging.properties
+28-Nov-2019 11:06:47.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Nov-2019 11:06:47.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Nov-2019 11:06:47.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Nov-2019 11:06:47.283 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Nov-2019 11:06:47.283 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Nov-2019 11:06:47.283 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49
+28-Nov-2019 11:06:47.283 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49
+28-Nov-2019 11:06:47.286 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/temp
+28-Nov-2019 11:06:47.286 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/yyaoa/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+28-Nov-2019 11:06:47.429 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:06:47.446 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Nov-2019 11:06:47.460 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:06:47.461 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Nov-2019 11:06:47.462 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 518 ms
+28-Nov-2019 11:06:47.487 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Nov-2019 11:06:47.488 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.49
+28-Nov-2019 11:06:47.495 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/docs]
+28-Nov-2019 11:06:47.714 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/docs] has finished in [218] ms
+28-Nov-2019 11:06:47.714 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/manager]
+28-Nov-2019 11:06:47.744 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/manager] has finished in [30] ms
+28-Nov-2019 11:06:47.744 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/examples]
+28-Nov-2019 11:06:48.032 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/examples] has finished in [288] ms
+28-Nov-2019 11:06:48.032 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/ROOT]
+28-Nov-2019 11:06:48.048 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/ROOT] has finished in [16] ms
+28-Nov-2019 11:06:48.048 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/host-manager]
+28-Nov-2019 11:06:48.064 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/host-manager] has finished in [15] ms
+28-Nov-2019 11:06:48.066 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:06:48.074 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:06:48.076 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 614 ms
+28-Nov-2019 11:07:53.561 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Nov-2019 11:07:53.562 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:07:53.570 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:07:53.576 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Nov-2019 11:07:53.598 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:07:53.601 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:07:53.602 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:07:53.603 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:10:07.732 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.49
+28-Nov-2019 11:10:07.736 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 17 2019 18:45:30 UTC
+28-Nov-2019 11:10:07.736 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.49.0
+28-Nov-2019 11:10:07.736 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+28-Nov-2019 11:10:07.736 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.14.6
+28-Nov-2019 11:10:07.737 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+28-Nov-2019 11:10:07.737 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/jre
+28-Nov-2019 11:10:07.737 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_231-b11
+28-Nov-2019 11:10:07.737 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Nov-2019 11:10:07.738 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49
+28-Nov-2019 11:10:07.738 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49
+28-Nov-2019 11:10:07.739 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/conf/logging.properties
+28-Nov-2019 11:10:07.739 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Nov-2019 11:10:07.739 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Nov-2019 11:10:07.739 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Nov-2019 11:10:07.740 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Nov-2019 11:10:07.740 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Nov-2019 11:10:07.740 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49
+28-Nov-2019 11:10:07.740 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49
+28-Nov-2019 11:10:07.740 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/temp
+28-Nov-2019 11:10:07.740 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/yyaoa/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+28-Nov-2019 11:10:07.896 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:10:07.916 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Nov-2019 11:10:07.939 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:10:07.940 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+28-Nov-2019 11:10:07.941 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 650 ms
+28-Nov-2019 11:10:07.974 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Nov-2019 11:10:07.974 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.49
+28-Nov-2019 11:10:07.981 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/docs]
+28-Nov-2019 11:10:08.212 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/docs] has finished in [230] ms
+28-Nov-2019 11:10:08.212 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/manager]
+28-Nov-2019 11:10:08.244 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/manager] has finished in [32] ms
+28-Nov-2019 11:10:08.244 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/examples]
+28-Nov-2019 11:10:08.584 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/examples] has finished in [340] ms
+28-Nov-2019 11:10:08.584 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/ROOT]
+28-Nov-2019 11:10:08.599 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/ROOT] has finished in [15] ms
+28-Nov-2019 11:10:08.599 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/host-manager]
+28-Nov-2019 11:10:08.615 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/yyaoa/Documents/tutorial/tutorials/spring/apache-tomcat-8.5.49/webapps/host-manager] has finished in [16] ms
+28-Nov-2019 11:10:08.618 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:10:08.628 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:10:08.631 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 689 ms
+28-Nov-2019 11:11:26.094 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Nov-2019 11:11:26.095 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:11:26.104 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:11:26.110 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Nov-2019 11:11:26.133 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:11:26.135 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+28-Nov-2019 11:11:26.136 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Nov-2019 11:11:26.136 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
