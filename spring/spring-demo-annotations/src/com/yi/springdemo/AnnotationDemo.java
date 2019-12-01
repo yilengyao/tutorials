@@ -16,6 +16,9 @@ public class AnnotationDemo {
         // Call method to get the daily fortune
         System.out.println(tennisCoach.getDailyFortune());
 
+        // Call method to get the daily menu
+        System.out.println(tennisCoach.getDailyMenu());
+
         // Close the context
         context.close();
     }
