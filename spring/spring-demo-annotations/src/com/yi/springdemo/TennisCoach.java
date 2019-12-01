@@ -8,6 +8,10 @@ public class TennisCoach implements Coach {
     private FortuneService fortuneService;
     private FoodService foodService;
 
+    // Dependency injection with field injection
+    @Autowired
+    private TransportationService transportationService;
+
     // Constructor dependency injection
     @Autowired
     public TennisCoach(FortuneService fortuneService) {
@@ -26,6 +30,10 @@ public class TennisCoach implements Coach {
 
     public String getDailyMenu() {
         return foodService.getMenu();
+    }
+
+    public String getDailyTransportation() {
+        return transportationService.getTransportation();
     }
 
     @Override

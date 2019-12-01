@@ -19,6 +19,9 @@ public class AnnotationDemo {
         // Call method to get the daily menu
         System.out.println(tennisCoach.getDailyMenu());
 
+        // Call method to get daily transport
+        System.out.println(tennisCoach.getDailyTransportation());
+
         // Close the context
         context.close();
     }
