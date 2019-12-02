@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="spring-aspects-5.2.1.RELEASE-sources">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../spring-framework-5.2.1.RELEASE 2/libs/spring-context-indexer-5.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../spring-framework-5.2.1.RELEASE 2/libs/spring-jcl-5.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../spring-framework-5.2.1.RELEASE 2/libs/spring-oxm-5.2.1.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../spring-framework-5.2.1.RELEASE 2/libs/spring-webmvc-5.2.1.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../spring-framework-5.2.1.RELEASE 2/libs/spring-context-5.2.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../spring-framework-5.2.1.RELEASE 2/libs/spring-instrument-5.2.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../spring-framework-5.2.1.RELEASE 2/libs/spring-orm-5.2.1.RELEASE-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../spring-framework-5.2.1.RELEASE 2/libs/spring-webflux-5.2.1.RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../spring-framework-5.2.1.RELEASE 2/libs/spring-aspects-5.2.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../spring-framework-5.2.1.RELEASE 2/libs/spring-core-5.2.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../spring-framework-5.2.1.RELEASE 2/libs/spring-jms-5.2.1.RELEASE-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../spring-framework-5.2.1.RELEASE 2/libs/spring-tx-5.2.1.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
