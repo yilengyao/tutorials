@@ -1,11 +1,60 @@
 version: "3.7"
 services:
-    rabbitmq3:
-        image: rabbitmq:3-management
+#     rabbitmq3:
+#         image: rabbitmq:3.8
+#         container_name: rabbit-1
+#         hostname: rabbit-1
+#         networks: 
+#             - rabbits
+#         ports:
+#             - 8090:15672
+                
+            
+    rabbitmq1:
+        image: rabbitmq:3.8-management
+        container_name: rabbit-1
+        hostname: rabbit-1
         environment:
-            RABBITMQ_ERLANG_COOKIE: 'secret cookie here'
-        volumes:
-            - ./db-data:/var/lib/rabbitmq
+            RABBITMQ_ERLANG_COOKIE: 'DSHEVCXBBETJJVJWTOWT'
+            RABBITMQ_DEFAULT_USER: 'user'
+            RABBITMQ_DEFAULT_PASS: 'user'
+#         volumes:
+#             - ./.docker/rabbitmq/etc/:/etc/rabbitmq/
+#             - ./.docker/rabbitmq/data/:/var/lib/rabbitmq/
+#             - ./.docker/rabbitmq/logs/:/var/log/rabbitmq/
+        networks:
+            - rabbits
         ports:
-            - 15672:15672
+            - 8091:15672
+            
+#     rabbitmq2:
+#         image: rabbitmq:3.8-management
+#         container_name: rabbit-2
+#         hostname: rabbit-2
+#         environment:
+#             RABBITMQ_ERLANG_COOKIE: 'DSHEVCXBBETJJVJWTOWT'
+#             CLUSTERED: 'true'
+#             CLUSTER_WITH: 'rabbit-1'
+#         networks:
+#             - rabbits
+#         ports:
+#             - 8092:15672
+            
+#     rabbitmq3:
+#         image: rabbitmq:3.8-management
+#         container_name: rabbit-3
+#         hostname: rabbit-3
+#         environment:
+#             RABBITMQ_ERLANG_COOKIE: 'DSHEVCXBBETJJVJWTOWT'
+#             CLUSTERED: 'true'
+#             CLUSTER_WITH: 'rabbit-1'
+#         networks:
+#             - rabbits
+#         ports:
+#             - 8093:15672
+            
+networks:
+    rabbits:
+        name: rabbits
+    
         
