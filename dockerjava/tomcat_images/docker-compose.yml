@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+    tomcat:
+      image: tomcat:10.0-jdk11-corretto
+      ports:
+        - "80:8080"
+      container_name: tomcat
+      volumes:
+        - ./logs/:/usr/local/tomcat/logs/
