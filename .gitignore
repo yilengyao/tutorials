@@ -4,3 +4,4 @@ coreutils
 .gradle
 .idea
 *.venv
+spring/images/
