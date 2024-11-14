@@ -5,3 +5,5 @@ coreutils
 .idea
 *.venv
 spring/images/
+.**/.pretzel/*
+.**/.pretzel/**
