@@ -1,9 +1,7 @@
-version: '3.9'
-
 services:
-  pretzel:
+  tutorial:
     image: python:3.9-slim
-    container_name: pretzel-lab
+    container_name: tutorial
     working_dir: /app  # Set the container's working directory
     ports:
       - "8888:8888"
@@ -12,7 +10,8 @@ services:
     command: >
       sh -c "
       apt-get update &&
-      apt-get install -y --no-install-recommends build-essential gcc &&
+      apt-get install -y --no-install-recommends build-essential gcc git &&
       pip install pretzelai &&
-      pretzel lab --ip=0.0.0.0 --allow-root --notebook-dir=/app --ServerApp.allow_remote_access=True --ServerApp.token='' --no-browser
+      pip install torch torchvision torchaudio &&
+      jupyter lab --ip=0.0.0.0 --allow-root --notebook-dir=/app --ServerApp.token='' --no-browser
       "
