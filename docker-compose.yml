@@ -1,17 +1,39 @@
+# need to install
+# # Reconfigure NVIDIA Container Runtime
+# sudo nvidia-ctk runtime configure --runtime=docker
+
+# # Make sure the runtime is set as default
+# sudo nvidia-ctk runtime configure --runtime=docker --set-as-default
+
+# # Restart Docker daemon
+# sudo systemctl restart docker
+
 services:
   tutorial:
-    image: python:3.9-slim
-    container_name: tutorial
-    working_dir: /app  # Set the container's working directory
+    image: nvidia/cuda:12.6.3-base-ubuntu20.04
+    container_name: tutorial-gpu
+    working_dir: /app
     ports:
       - "8888:8888"
     volumes:
-      - .:/app  # Mount the current directory to /app in the container
+      - .:/app
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [compute,utility]
+              count: all
     command: >
       sh -c "
-      apt-get update &&
-      apt-get install -y --no-install-recommends build-essential gcc git &&
-      pip install pretzelai &&
-      pip install torch torchvision torchaudio &&
+      apt-get update && \
+      apt-get install -y --no-install-recommends build-essential gcc git python3 python3-pip python3-dev rustc cargo && \
+      python3 -m pip install --upgrade pip setuptools wheel && \
+      python3 -m pip install 'onnxruntime>=1.17.0,<1.20.0' && \
+      python3 -m pip install pretzelai && \
+      python3 -m pip install torch torchvision torchaudio && \
       jupyter lab --ip=0.0.0.0 --allow-root --notebook-dir=/app --ServerApp.token='' --no-browser
       "
