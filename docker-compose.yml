@@ -7,12 +7,13 @@
 
 # # Restart Docker daemon
 # sudo systemctl restart docker
-
 services:
   tutorial:
     image: nvidia/cuda:12.6.3-base-ubuntu20.04
     container_name: tutorial-gpu
     working_dir: /app
+    extra_hosts:
+      - "localhost:192.168.65.2"
     ports:
       - "8888:8888"
     volumes:
@@ -25,7 +26,7 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              capabilities: [compute,utility]
+              capabilities: [compute, utility]
               count: all
     command: >
       sh -c "
@@ -35,5 +36,7 @@ services:
       python3 -m pip install 'onnxruntime>=1.17.0,<1.20.0' && \
       python3 -m pip install pretzelai && \
       python3 -m pip install torch torchvision torchaudio && \
+      python3 -m pip install tokenizers==0.20.3 && \
       jupyter lab --ip=0.0.0.0 --allow-root --notebook-dir=/app --ServerApp.token='' --no-browser
       "
+
