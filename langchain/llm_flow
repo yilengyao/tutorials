@@ -1,0 +1,12 @@
+// LLM Processing Flow
+digraph {
+	rankdir=LR
+	node [shape=box style=rounded]
+	client [label=Client]
+	prompt [label=Prompt]
+	llm [label=LLM]
+	parser [label="Output Parser"]
+	client -> prompt
+	prompt -> llm
+	llm -> parser
+}

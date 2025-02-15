@@ -1,0 +1,20 @@
+digraph {
+	rankdir=LR
+	node [shape=box]
+	client [label=Client]
+	frontend [label=Frontend]
+	prompt [label="Prompt
+Engineering"]
+	llm [label=LLM]
+	parser [label="Output
+Parsing"]
+	ext [label="External Knowledge"]
+	client -> frontend
+	frontend -> prompt
+	prompt -> llm
+	llm -> parser
+	parser -> frontend
+	ext -> prompt [style=dotted]
+	parser -> ext [style=dotted]
+	llm -> llm [label=loop style=dashed]
+}
