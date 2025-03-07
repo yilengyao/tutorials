@@ -1,0 +1,11 @@
+// Pregel Framework
+digraph {
+	rankdir=LR
+	node [shape=box style=rounded]
+	active [label=Active]
+	inactive [label=Inactive]
+	active:w -> active:w
+	inactive:e -> inactive:e
+	active -> inactive [label="Vote to halt"]
+	inactive -> active [label="Message received"]
+}
