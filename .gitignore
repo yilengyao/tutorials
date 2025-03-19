@@ -10,3 +10,9 @@ spring/images/
 **/.pretzel/
 **/.pretzel/*
 **/.pretzel/**
+.cache/
+.gradio/
+agents/gudenberg_robot_books/
+**/agentops.log*
+agents/autogen/.coding
+agents/autogen/flagged

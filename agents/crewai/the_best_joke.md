@@ -1,0 +1,1 @@
+Why did the AI go to therapy? Because it couldn't handle its own algorithms!
