@@ -1,0 +1,6 @@
+plotly
+openai
+scikit-learn
+chromadb
+unstructured
+langchain_ollama

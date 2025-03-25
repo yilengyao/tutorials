@@ -1,0 +1,8 @@
+[
+    {
+        "model": "qwen2.5-coder:14b",
+        "base_url": "http://localhost:11434/v1",
+        "api_key": "ollama",
+        "price": [0.0, 0.0]
+    }
+]
