@@ -10,6 +10,11 @@ spring/images/
 **/.pretzel/
 **/.pretzel/*
 **/.pretzel/**
+operating-systems/.pretzel
+.pretzel/
+pretzel/
+./.pretzel/
+.pretzel/*
 .cache/
 .gradio/
 agents/gudenberg_robot_books/
